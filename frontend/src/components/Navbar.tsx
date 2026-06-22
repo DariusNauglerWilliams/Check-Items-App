@@ -1,7 +1,7 @@
-import * as React from "react";
 import reactLogo from "../assets/react.svg";
 import './Navbar.css'
 import SearchBar from "./SearchBar";
+import {Link} from "react-router-dom"
 
 function Navbar() {
 
@@ -17,10 +17,10 @@ function Navbar() {
 
 <div>
 <ul className="NavbarLinks">
-<li>Home</li>
-<li>Scan</li>
-<li>History</li>
-<li>Compare</li>
+<li><Link to="/">Home</Link></li>
+<li><Link to="/scan">Scan</Link></li>
+<li><Link to="/history">History</Link></li>
+<li><Link to="/compare">Compare</Link></li>
 </ul>
 </div>
 </nav>
