@@ -1,0 +1,56 @@
+
+
+/*  NAVBAR CSS */
+.Navbar{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 2px solid black;
+padding-bottom: 7px;
+padding: 12px 32px
+
+}
+
+.NavbarLinks{
+
+display: flex;
+gap: 60px;
+list-style: none;
+padding-right: 45px;
+}
+
+.TextLogo{
+
+display: flex;
+align-items: center;
+gap: 5px;
+padding-left: 20px
+}
+
+
+
+/*  SEARCHBAR CSS */
+.SearchBar{
+
+padding-left: 170px;
+align-items: center;
+display: flex;
+gap: 6px;
+
+
+}
+
+.SearcherBar{
+
+
+width: 380px;
+height: 24px;
+}
+
+
+/*  EXTRA CSS */
+
+body{
+margin: 0;
+}

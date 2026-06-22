@@ -1,6 +1,7 @@
 import * as React from "react";
 import reactLogo from "../assets/react.svg";
 import './Navbar.css'
+import SearchBar from "./SearchBar";
 
 function Navbar() {
 
@@ -11,9 +12,8 @@ function Navbar() {
     <div>
 <p className="TextLogo">InOut<img src={reactLogo} alt="InPeaceLogo" className="ImageLogo"></img> </p> 
 </div>
-<div className="navbar-search">
-    Search
-  </div>
+
+<SearchBar></SearchBar>
 
 <div>
 <ul className="NavbarLinks">
@@ -21,9 +21,6 @@ function Navbar() {
 <li>Scan</li>
 <li>History</li>
 <li>Compare</li>
-<li>About</li>
-<li>Details</li>
-<li>Contact</li>
 </ul>
 </div>
 </nav>
