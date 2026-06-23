@@ -11,7 +11,7 @@ function Navbar() {
 <nav className="Navbar">
     <div>
       <Link to="/" className="LogoLink">
-<p className="TextLogo">InOut
+<p className="TextLogo">In-Out
   <img src={reactLogo} alt="InPeaceLogo" className="ImageLogo"></img> 
   </p> 
   </Link>
