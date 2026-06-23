@@ -10,7 +10,11 @@ function Navbar() {
 
 <nav className="Navbar">
     <div>
-<p className="TextLogo">InOut<img src={reactLogo} alt="InPeaceLogo" className="ImageLogo"></img> </p> 
+      <Link to="/" className="LogoLink">
+<p className="TextLogo">InOut
+  <img src={reactLogo} alt="InPeaceLogo" className="ImageLogo"></img> 
+  </p> 
+  </Link>
 </div>
 
 <SearchBar></SearchBar>

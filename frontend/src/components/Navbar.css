@@ -18,17 +18,30 @@ display: flex;
 gap: 60px;
 list-style: none;
 padding-right: 45px;
+
 }
+
+.NavbarLinks a{
+
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .TextLogo{
 
 display: flex;
 align-items: center;
 gap: 5px;
-padding-left: 20px
+padding-left: 20px;
+
+ 
 }
 
-
+.LogoLink {
+text-decoration: none;
+color: inherit;
+}
 
 /*  SEARCHBAR CSS */
 .SearchBar{
