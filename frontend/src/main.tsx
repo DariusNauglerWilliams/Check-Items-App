@@ -7,7 +7,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Compare from './pages/Compare.tsx'
 import History from './pages/History.tsx'
 import Scan from './pages/Scan.tsx'
-import Main from './pages/main.tsx'
+import Main from './pages/Main.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
