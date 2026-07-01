@@ -8,6 +8,7 @@ import Compare from './pages/Compare.tsx'
 import History from './pages/History.tsx'
 import Scan from './pages/Scan.tsx'
 import Main from './pages/Main.tsx'
+import Footer from './components/Footer.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -21,5 +22,6 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/compare" element={<Compare/>}></Route>
       </Routes>
     </BrowserRouter>
+    <Footer/>
   </StrictMode>,
 )
