@@ -12,6 +12,8 @@ import Footer from './components/Footer.tsx'
 import Register from './pages/Register.tsx'
 import Login from './pages/Login.tsx'
 import ForgotPassword from './pages/ForgotPassword.tsx'
+import Profile from './pages/Profile.tsx'
+import Settings from './pages/Settings.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -26,6 +28,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
          <Route path="/forgotpassword" element={<ForgotPassword/>}></Route>
+         <Route path="/profile" element={<Profile />} />
+         <Route path="/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
     <Footer/>

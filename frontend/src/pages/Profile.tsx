@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 
 function Profile(){
 
@@ -20,7 +21,9 @@ return(
 <a href="">View All Favourites</a>
 
 
-<button>Go To Settings</button>
+<button>
+<Link to="/settings">Go To Settings</Link>
+</button>
 
 </section>
 
