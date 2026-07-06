@@ -25,7 +25,9 @@ function Navbar() {
 <li><Link to="/scan">Scan</Link></li>
 <li><Link to="/history">History</Link></li>
 <li><Link to="/compare">Compare</Link></li>
+<li><Link to="/register">Sign In</Link></li>
 </ul>
+
 </div>
 </nav>
 

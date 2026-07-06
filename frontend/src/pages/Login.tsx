@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 function Login(){
 
@@ -20,9 +21,13 @@ return(
 <button>Login</button>
 
 
- <h6><a href=""></a>Forgot Password?</h6>
+ <h6>
+   <Link to="/forgotpassword">Forgot Password?</Link>
+    </h6>
 
-  <h6><a href=""></a>Don't have an account? Register</h6>
+  <h6>
+    Don't have an account? <Link to="/register">Register</Link> 
+    </h6>
 </section>
 
 </>

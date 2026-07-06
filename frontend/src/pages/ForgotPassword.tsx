@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 function ForgotPassword(){
 
@@ -15,8 +16,9 @@ return(
 <button>Send Reset Link</button>
 
 
-
-<p>Back to Sign In</p>
+<p>
+<Link to="/login">Back to Sign In</Link>
+</p>
 </section>
 
 

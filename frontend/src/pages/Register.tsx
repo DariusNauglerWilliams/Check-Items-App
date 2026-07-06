@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 function Register(){
@@ -34,7 +35,9 @@ return(
 </section>
 
 <section>
-    <h5><a href=""></a>Already have an account? Sign In</h5>
+    <h5>
+       Already have an account? <Link to="/login">Sign In</Link>
+    </h5>
 </section>
 
 
