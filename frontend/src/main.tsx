@@ -14,6 +14,7 @@ import Login from './pages/Login.tsx'
 import ForgotPassword from './pages/ForgotPassword.tsx'
 import Profile from './pages/Profile.tsx'
 import Settings from './pages/Settings.tsx'
+import ProductDetails from './pages/ProductDetails.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -30,6 +31,7 @@ createRoot(document.getElementById('root')!).render(
          <Route path="/forgotpassword" element={<ForgotPassword/>}></Route>
          <Route path="/profile" element={<Profile />} />
          <Route path="/settings" element={<Settings />} />
+          <Route path="/products" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
     <Footer/>
