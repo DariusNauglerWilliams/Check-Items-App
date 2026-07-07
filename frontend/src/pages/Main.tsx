@@ -1,76 +1,74 @@
+import "./Main.css"
+import barcodeScan from "../assets/barcode.png"
+import heroImg from "../assets/ChatGPT Image Jul 7, 2026, 04_51_44 PM.png"
+
 function Main() {
   return (
     <>
-    <section>
+      <section className="hero">
+        <div className="hero-content">
+        <h1 className="hero-title">Find Healthier Products</h1>
 
-     <h1>Find Healthier Products</h1> 
+        <p className="hero-subtitle">Scan barcodes, search products, and compare</p>
+         <p className="hero-subtitle">ingredients to make better long term choices.</p>
+       
 
-     <p>Scan barcodes, search products, and compare</p>
-     <p>ingredients to make better long term choices.</p>
+        <div className="hero-search">
+          <input className="hero-input" type="text" placeholder="Search for a product..." /> <button className="hero-button">Search</button>
 
-  <div>
-          <input
-            type="text"
-            placeholder="Search for a product..."
-          />
 
-          <button>
-            Search
-          </button>
-
-        </div>
-     <p>or</p>
-
-<button>Scan Barcode</button>
      
-    
-</section>
+          
 
-<section>
+         
+        </div>
 
-<h3>Quick Actions</h3>
+        <p className="hero-or">or</p>
 
-  <div>
-    <h4>Scan Product</h4>
-    <p>Scan a barcode to analyze a product.</p>
-  </div>
-
-  <div>
-    <h4>History</h4>
-    <p>View previously scanned items.</p>
-  </div>
-
-  <div>
-    <h4>Compare</h4>
-    <p>Compare two products side by side.</p>
-  </div>
-
-</section>
-
-<section>
-
-<h3>Recent Scans</h3>
-
-<p>No products scanned yet.</p>
-
-</section>
-
-<section>
-
-  <h3>How It Works</h3>
-
-  <div>
-    <p>1. Search or scan a product.</p>
-    <p>2. Review ingredients and nutrition.</p>
-    <p>3. Compare healthier alternatives.</p>
-  </div>
-
-
-</section>
+        <button className="hero-scan-button"><img src={barcodeScan} alt="img" className="img-btn"></img>Scan Barcode</button>
 
 
 
-</>
+        
+              </div>
+                    <img src={heroImg} alt="hero-img" className="hero-image" />
+      </section>
+
+      <section className="quick-actions">
+        <h3 className="section-title">Quick Actions</h3>
+
+        <div className="action-card">
+          <h4 className="action-title">Scan Product</h4>
+          <p className="action-text">Scan a barcode to analyze a product.</p>
+        </div>
+
+        <div className="action-card">
+          <h4 className="action-title">History</h4>
+          <p className="action-text">View previously scanned items.</p>
+        </div>
+
+        <div className="action-card">
+          <h4 className="action-title">Compare</h4>
+          <p className="action-text">Compare two products side by side.</p>
+        </div>
+      </section>
+
+      <section className="recent-scans">
+        <h3 className="section-title">Recent Scans</h3>
+
+        <p className="empty-state">No products scanned yet.</p>
+      </section>
+
+      <section className="how-it-works">
+        <h3 className="section-title">How It Works</h3>
+
+        <div className="steps">
+          <p className="step-text">1. Search or scan a product.</p>
+          <p className="step-text">2. Review ingredients and nutrition.</p>
+          <p className="step-text">3. Compare healthier alternatives.</p>
+        </div>
+      </section>
+    </>
   );
 }
 
