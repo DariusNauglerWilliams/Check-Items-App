@@ -33,8 +33,10 @@ createRoot(document.getElementById('root')!).render(
          <Route path="/profile" element={<Profile />} />
          <Route path="/settings" element={<Settings />} />
           <Route path="/products" element={<ProductDetails />} />
+          
       </Routes>
+        <Footer/>
     </BrowserRouter>
-    <Footer/>
+  
   </StrictMode>,
 )
