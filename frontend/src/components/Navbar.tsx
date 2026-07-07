@@ -1,4 +1,4 @@
-import reactLogo from "../assets/react.svg";
+import reactLogo from "../assets/logo.png";
 import './Navbar.css'
 import SearchBar from "./SearchBar";
 import {Link} from "react-router-dom"
@@ -11,8 +11,9 @@ function Navbar() {
 <nav className="Navbar">
     <div>
       <Link to="/" className="LogoLink">
-<p className="TextLogo">In-Out
+<p className="TextLogo">
   <img src={reactLogo} alt="InPeaceLogo" className="ImageLogo"></img> 
+  In-Out
   </p> 
   </Link>
 </div>

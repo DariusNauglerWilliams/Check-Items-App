@@ -15,6 +15,7 @@ import ForgotPassword from './pages/ForgotPassword.tsx'
 import Profile from './pages/Profile.tsx'
 import Settings from './pages/Settings.tsx'
 import ProductDetails from './pages/ProductDetails.tsx'
+import './global.css'
 
 
 createRoot(document.getElementById('root')!).render(

@@ -6,36 +6,65 @@
 display: flex;
 justify-content: space-between;
 align-items: center;
-border-bottom: 2px solid black;
-padding-bottom: 7px;
-padding: 12px 32px
 
+padding-bottom: 10px;
+padding: 1px;
+background-color: #ffff;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+
+position: sticky;
+top: 0;
+z-index: 100;
 }
 
 .NavbarLinks{
 
 display: flex;
-gap: 60px;
+gap: 40px;
 list-style: none;
-padding-right: 45px;
+padding-right: 50px;
 
 }
 
 .NavbarLinks a{
-
+    
+    position: relative;
     text-decoration: none;
-    color: inherit;
+    color: black;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    
 }
 
+.NavbarLinks a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #22c55e;
+    
+    transition: width 0.20s ease;
+}
+.NavbarLinks a:hover::after{
+    width: 100%;
+    
+}
+.NavbarLinks a:hover{
+    color: #22c55e;
+}
 
 .TextLogo{
 
 display: flex;
 align-items: center;
 gap: 5px;
-padding-left: 20px;
-
- 
+padding-left: 22px;
+font-size: 25px;
+font-weight: 650;
 }
 
 .LogoLink {
@@ -43,27 +72,51 @@ text-decoration: none;
 color: inherit;
 }
 
+.ImageLogo{
+
+    
+    height:85px;
+    width:85px;
+}
+
+
+
+
+
+
+
+
+
+
 /*  SEARCHBAR CSS */
-.SearchBar{
+.search-bar{
 
-padding-left: 170px;
-align-items: center;
-display: flex;
-gap: 6px;
+position: relative;
 
 
+
+}
+
+.search-icon{
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    
+    
 }
 
 .SearcherBar{
 
-
-width: 380px;
-height: 24px;
+   width: 550px;
+    padding: 11px 70px 11px 14px;
+    
+    background: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 
-/*  EXTRA CSS */
-
-body{
-margin: 0;
-}
