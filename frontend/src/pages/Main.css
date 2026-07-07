@@ -108,22 +108,144 @@ height: 26px;
 
 
 
-.quick-actions {}
 
-.section-title {}
 
-.action-card {}
 
-.action-title {}
 
-.action-text {}
 
-.recent-scans {}
+.quick-actions {
+ 
+      margin-bottom: 90px;
+    padding: 10px 180px;
+    padding-bottom: 55px;
+}
 
-.empty-state {}
+.section-title {
+margin-bottom: 24px;
+font-size: 24px;
 
-.how-it-works {}
+}
 
-.steps {}
+.action-card {
+   display:flex;
+     flex-direction: column;
+       align-items: center;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 40px 100px 10px 100px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+}
 
-.step-text {}
+.action-card:hover {
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.4);
+    transform: translateY(-6px);
+}
+
+.action-grid{
+
+display: flex;
+justify-content: space-between;
+gap: 30px;
+
+}
+
+.action-icon {
+
+
+width: 68px;
+height: 68px;
+  margin-bottom: 15px;
+}
+
+
+.action-title {
+    font-weight: 700;
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+
+.action-text {
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.recent-scans {
+    padding: 0 180px 60px;
+}
+
+.recent-scans .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.how-it-works {
+    padding: 0 180px 60px;
+    margin-top: 50px;
+}
+
+.how-it-works .section-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #f0fdf4;
+    border: 1px solid #dcfce7;
+    border-radius: 12px;
+    padding: 28px 32px;
+}
+
+.step-text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #14532d;
+}

@@ -1,8 +1,13 @@
 import "./Main.css"
 import barcodeScan from "../assets/barcode.png"
 import heroImg from "../assets/ChatGPT Image Jul 7, 2026, 04_51_44 PM.png"
+import { useNavigate } from "react-router-dom"
+import scanImg from "../assets/scanner.png"
+import clockImg from "../assets/clock.png"
+import compareImg from "../assets/ab-testing (1).png"
 
 function Main() {
+  const navigate = useNavigate()
   return (
     <>
       <section className="hero">
@@ -37,19 +42,26 @@ function Main() {
       <section className="quick-actions">
         <h3 className="section-title">Quick Actions</h3>
 
-        <div className="action-card">
+
+
+<div className="action-grid">
+        <div className="action-card" onClick={() => navigate("/scan")}>
+          <img src={scanImg} alt="scanimg" className="action-icon" />
           <h4 className="action-title">Scan Product</h4>
-          <p className="action-text">Scan a barcode to analyze a product.</p>
+          <p className="action-text">Scan a barcode to analyze</p><p className="action-text">ingredients and nutrition.</p>
         </div>
 
-        <div className="action-card">
+        <div className="action-card" onClick={() => navigate("/history")}>
+          <img src={clockImg} alt="historyimg" className="action-icon" />
           <h4 className="action-title">History</h4>
-          <p className="action-text">View previously scanned items.</p>
+          <p className="action-text">See your previously scanned</p><p className="action-text">products.</p>
         </div>
 
-        <div className="action-card">
+        <div className="action-card" onClick={() => navigate("/compare")}>
+          <img src={compareImg} alt="compareimg" className="action-icon" />
           <h4 className="action-title">Compare</h4>
-          <p className="action-text">Compare two products side by side.</p>
+          <p className="action-text">Compare two products side by</p><p className="action-text">side.</p>
+        </div>
         </div>
       </section>
 
