@@ -53,11 +53,24 @@ body {
 
 .scan-or-wrapper {
 
-    padding-top: 1.5px;
+       display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.scan-or-wrapper::before,
+.scan-or-wrapper::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #cbd5e1;
 }
 
 .scan-or-text {
-
+    margin: 0 18px;
+    font-weight: 500;
 }
 
 .scan-actions-2 {
