@@ -1,0 +1,212 @@
+.scan-page {
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
+  gap: 28px;
+    
+ 
+  
+}
+
+body {
+  background-color: #F8F9FA;
+  
+}
+
+.scan-hero {
+  display: flex;
+  align-items: center;
+  
+}
+
+.scan-hero-copy {
+ 
+}
+
+.scan-title {
+  font-weight: 700;
+  font-size: 48px;
+  padding-right: 280px;
+  padding-bottom: 20px;
+  
+}
+
+.scan-subtitle {
+  font-weight: 480;
+  font-size: 18.5px;
+  
+}
+
+
+
+.scan-actions-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 35px;
+  padding-top: 60px;
+  gap: 60px;
+  
+}
+
+.scan-or-wrapper {
+
+    padding-top: 1.5px;
+}
+
+.scan-or-text {
+
+}
+
+.scan-actions-2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+  
+}
+
+.scan-button {
+  width: 380px;
+  height: 55px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.scan-button-primary {
+    background-color:  #22c55e;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    border-color: #22c55e;
+    border: 1px solid #22c55e;
+       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.scan-button-secondary {
+
+    color: black;
+    background-color: white;
+      font-weight: 500;
+    font-size: 16px;
+    border-color: white;
+    
+  border: 1px solid #F8F9FA;
+         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+         
+}
+
+.scan-button-icon {
+  height: 26px;
+  width: 26px;
+}
+
+.scan-above {
+ 
+width: 300px;
+height: 300px;
+
+
+
+}
+
+.scan-how-it-works {
+
+        display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #f0fdf4;
+    border: 1px solid #dcfce7;
+   
+    width: 650px;
+   padding: 48px;
+   padding-top: 30px;
+   
+}
+
+.scan-how-title {
+
+     display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+    
+}
+
+.scan-step-icon {
+    margin-left: 20px;
+  width: 22px;
+  height: 22px;
+}
+
+
+.scan-how-icon{
+margin-left: 11px;
+width: 36px;
+height: 36px;
+
+
+}
+
+.scan-step {
+ 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scan-manual-help {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+
+  width: 650px;
+  padding: 32px;
+
+  background-color: white;
+
+
+}
+
+.scan-manual-copy-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.scan-manual-title {
+  padding-bottom: 10px;
+}
+
+.scan-manual-copy {}
+
+.scan-manual-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scan-manual-image {
+  width: 250px;
+  height: auto;
+}
+
+.wrapper-scan-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 5px 120px 50px 120px;
+  background-color: white;
+}
