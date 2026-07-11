@@ -1,6 +1,16 @@
-.history-page {}
+.history-page {
+      background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 150px;
+}
 
-.history-header {}
+.history-header {
+
+     width: 800px;
+  padding-top: 80px;
+}
 
 .history-header-left {}
 
@@ -8,19 +18,69 @@
 
 .history-header-copy {}
 
-.history-title {}
+.history-title {
+     font-size: 45px;
+     padding-bottom: 15px;
+}
 
-.history-subtitle {}
+.history-subtitle {
+     font-size: 18px;
+}
 
-.history-filters {}
+.history-filters {
+  width: 800px;
+  display: flex;
+  gap: 16px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
-.filter-btn {}
+.filter-btn {
+  height: 44px;
+  padding: 0 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  background-color: white;
+  border: 1px solid #cbd1d9;
+  border-radius: 6px;
+  font-weight: 500;
+  white-space: nowrap;
+
+}
+
+.filter-btn:hover{
+
+background-color: #22c55e;
+color: white;
+
+}
 
 .filter-btn.active {}
 
-.filter-icon {}
+.filter-icon {
+    width: 19px;
+    height: 19px;
+}
 
-.history-main {}
+.history-main {
+
+   width: 800px;
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+}
 
 .history-list {}
 
@@ -38,8 +98,51 @@
 
 .history-item-score {}
 
-.history-footer {}
+.history-footer {
+  width: 800px;
+  padding: 20px;
 
-.view-all-btn {}
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 
-.view-all-icon {}
+  box-sizing: border-box;
+}
+
+.view-all-btn {
+
+  width: 100%;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  background-color: white;
+  border: 1px solid #d7dce4;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 15px;
+ padding-right: 10px;
+  
+}
+.view-all-btn span{
+
+    flex: 1;
+    text-align: center;
+    
+}
+
+
+.view-all-icon {
+
+
+    width: 18px;
+    height: 18px;
+    
+       
+  
+}

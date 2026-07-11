@@ -1,6 +1,10 @@
 import "./history.css"
 // image imports intentionally omitted; placeholders used instead
 
+import rightArrow from '../assets/right-arrow.png'
+import star from "../assets/star.png"
+import red from "../assets/round.png"
+
 function History() {
   return (
     <section className="history-page">
@@ -15,9 +19,9 @@ function History() {
       </header>
 
       <nav className="history-filters">
-        <button className="filter-btn active">All Scans</button>
-        <button className="filter-btn"><img src="" alt="" className="filter-icon"/>Favorites</button>
-        <button className="filter-btn"><img src="" alt="" className="filter-icon"/>Needs Improvement</button>
+        <button className="filter-btn">All Scans</button>
+        <button className="filter-btn"><img src={star} alt="" className="filter-icon"/>Favorites</button>
+        <button className="filter-btn"><img src={red} alt="" className="filter-icon"/>Needs Improvement</button>
       </nav>
 
       <main className="history-main">
@@ -28,8 +32,9 @@ function History() {
 
       <footer className="history-footer">
         <button className="view-all-btn">
-          <img src="" alt="" className="view-all-icon" />
-          View All History
+          
+          <span>View All History</span>
+          <img src={rightArrow} alt="" className="view-all-icon" />
         </button>
       </footer>
     </section>
