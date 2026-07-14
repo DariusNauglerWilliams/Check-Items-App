@@ -113,9 +113,9 @@ height: 68px;
     background-color: white;
     border: 1px solid #d7dce4;
     border-radius: 6px;
-    width: 650px;
-    padding-top: 25px;
-    padding-bottom: 28px;
+    width: 820px;
+    padding-top: 35px;
+    padding-bottom: 60px;
 
     display: flex;
     align-items: center;
@@ -141,6 +141,8 @@ height: 68px;
          border-right: 1px solid #d0d2d6;
           border-bottom: 1px solid #d0d2d6;
           border-radius: 20px;
+            width: 92%;
+            
 }
 
 .compare-example-card {
@@ -149,6 +151,9 @@ padding: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
+   width: 50%;
+
+
 
 
 }
@@ -170,6 +175,8 @@ padding: 45px;
 }
 
 .compare-product-title {
+    justify-content: center;
+    align-items: center;
     padding-top: 15px;
        border-top: 1px solid #d0d2d6;
         width: 100%;

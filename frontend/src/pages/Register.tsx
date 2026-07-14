@@ -1,50 +1,73 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "../pages/register.css";
+
+function Register() {
+  return (
+    <section className="register-page">
+      <section className="register-container">
+        <header className="register-header">
+          <h2 className="register-title">New to the app?</h2>
+          <h5 className="register-subtitle">Create your account to save your scans,</h5>
+          <h5 className="register-subtitle">track your history, and compare products</h5>
+        </header>
 
 
-function Register(){
+        
 
-return(
-<>
-
-<section>
-<h2>New too the app?</h2>
-<h5>Create your account</h5>
-
-<input
-  type="text"
-  placeholder="Name"
-/>
-
-<input
-  type="email"
-  placeholder="Email"
-/>
-
-<input
-  type="password"
-  placeholder="Password"
-/>
-
-<input
-  type="password"
-  placeholder="Confirm Password"
-/>
-
-<button>Register</button>
-
-</section>
-
-<section>
-    <h5>
-       Already have an account? <Link to="/login">Sign In</Link>
-    </h5>
-</section>
+        <form className="register-form">
 
 
-</>
+             <h3 className="register-label">Full Name</h3>
+          <input
+            className="register-input"
+            type="text"
+            placeholder="Enter your full name"
+          />
 
-)
+
+             <h3 className="register-label">Email</h3>
+
+          <input
+            className="register-input"
+            type="email"
+            placeholder="Enter your email"
+          />
+
+             <h3 className="register-label">Password</h3>
+
+          <input
+            className="register-input"
+            type="password"
+            placeholder="Create a password"
+          />
+          <img src="" className="img-password"></img>
+
+          <h3 className="register-label">Confirm Password</h3>
+          <input
+            className="register-input"
+            type="password"
+            placeholder="Confirm your password"
+          />
+          <img src="" className="img-password"></img>
+
+            <button type="submit" className="register-button">
+            Sign Up
+          </button>
 
 
+ <section className="register-footer">
+          <h5 className="register-footer-text">
+            Already have an account? <Link className="register-link" to="/login">
+              Log in
+            </Link>
+          </h5>
+        </section>    
+        </form>
+
+       
+      </section>
+    </section>
+  );
 }
-export default Register
+
+export default Register;
