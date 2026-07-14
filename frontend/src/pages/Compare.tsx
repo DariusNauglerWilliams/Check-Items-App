@@ -44,6 +44,9 @@ function Compare() {
             <p className="compare-product-detail">Calories: 200kcal</p>
             <p className="compare-product-detail">Sugar: 5g</p>
             <p className="compare-product-detail">Protein: 18g</p>
+               <p className="compare-product-detail">Additives: 1</p>
+               <p className="compare-product-detail">Overall: Healthier Choice</p>
+               
           </div>
 
           <div className="compare-example-card compare-example-card-right">
@@ -53,6 +56,8 @@ function Compare() {
              <p className="compare-product-detail">Calories: 290kcal</p>
             <p className="compare-product-detail">Sugar: 19g</p>
             <p className="compare-product-detail">Protein: 6g</p>
+            <p className="compare-product-detail">Additives: 6</p>
+            <p className="compare-product-detail">Overall: Not Ideal</p>
           </div>
         </div>
       </section>
