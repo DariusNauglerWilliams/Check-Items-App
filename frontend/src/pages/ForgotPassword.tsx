@@ -1,32 +1,59 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "../pages/forgotpassword.css";
+import arrowimg from "../assets/back.png";
+import emailimg from "../assets/email (1).png";
 
-function ForgotPassword(){
+function ForgotPassword() {
+  return (
+    <>
+      <section className="forgot-password-page">
+        <div className="forgot-password-container">
+          <h3 className="forgot-password-title">Forgot Password</h3>
 
-return(
-<>
+          <p className="forgot-password-description">
+            No worries! Enter your email address and
+          </p>
 
-<section>
-<h5>Enter your email and we'll send you a password reset link.</h5>
+          <p className="forgot-password-description-secondary">
+            we'll send you a link to reset your password.
+          </p>
 
-<input
-  type="email"
-  placeholder="Email"
-/>
+          <div className="forgot-password-form">
+            <h3 className="forgot-email-title">Email</h3>
 
-<button>Send Reset Link</button>
+            <input
+              className="forgot-email-enter"
+              type="email"
+              placeholder="Enter your email"
+            />
 
+            <img
+              src={emailimg}
+              className="forgot-password-image"
+              alt=""
+            />
 
-<p>
-<Link to="/login">Back to Sign In</Link>
-</p>
-</section>
+            <button className="reset-password-button">
+              Send Reset Link
+            </button>
 
+            <p className="forgot-or-text">or</p>
 
-
-</>
-
-)
-
-
+            <p className="forgot-back-login">
+              <Link to="/login" className="forgot-auth-link">
+                <img
+                  src={arrowimg}
+                  className="forgot-back-login-icon"
+                  alt=""
+                />
+                Back to Log In
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
-export default ForgotPassword
+
+export default ForgotPassword;

@@ -1,39 +1,68 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "../pages/login.css";
 
-function Login(){
+function Login() {
+  return (
+    <>
+      <section className="login-page">
+        <div className="login-container">
+          <h2 className="login-title">Log In</h2>
+          <p className="login-description">Welcome back! Log In to continue</p>
+          <p className="login-description-secondary">
+            scanning and comparing products.
+          </p>
 
-return(
-<>
-<section>
-<h2>Welcome Back!</h2>
-<p>Sign in to continue</p>
+          <div className="login-form">
+            <h3 className="email-title">Email</h3>
+            <input
+              className="email-enter"
+              type="email"
+              placeholder="Enter your email"
+            />
 
-<input
-  type="email"
-  placeholder="Email"
-/>
+            <h3 className="password-title">Password</h3>
+            <input
+              className="password-enter"
+              type="password"
+              placeholder="Enter your password"
+            />
 
-<input
-  type="password"
-  placeholder="Password"
-/>
-
-<button>Login</button>
-
-
- <h6>
-   <Link to="/forgotpassword">Forgot Password?</Link>
-    </h6>
-
-  <h6>
-    Don't have an account? <Link to="/register">Register</Link> 
-    </h6>
-</section>
-
-</>
-
-)
+            
+            <div className="login-options">
+            <label className="remember-me">
+              <input className="remember-me-checkbox" type="checkbox" />
+              {" "}
+              Remember me
+            </label>
+              
 
 
+              <h6 className="forgot-password-link">
+              <Link to="/forgotpassword" className="auth-link">
+                Forgot Password?
+              </Link>
+            </h6>
+              </div>
+          
+
+            <button className="login-button">Log In</button> 
+
+            
+
+
+            
+
+            <h6 className="signup-link">
+              Don't have an account?{" "}
+              <Link to="/register" className="auth-link">
+                Sign up
+              </Link>
+            </h6>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
-export default Login
+
+export default Login;
