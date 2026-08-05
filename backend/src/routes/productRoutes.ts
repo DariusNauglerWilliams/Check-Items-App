@@ -1,6 +1,7 @@
 import Express from "express";
 
 
+
 const router = Express.Router();
 
 
@@ -8,7 +9,26 @@ router.get("/search" , async (req, res) =>{
 
 const search = req.query.q;
 
-const response = await fetch(`https://world.openfoodfacts.org/api/v2/product/${search}`)
+const response = await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${search}&search_simple=1&json=1`)
+
+if(!response.ok){
+
+    return res.status(response.status).json({error: "Open Food Facts search is temporarily unavailable. Please try again later."});
+}
+
+const data = await response.json()
+
+const products = data.products.map((product: any) => ({
+    barcode: product.code,
+    name: product.product_name,
+    brand: product.brands?.split(",")[0].trim(),
+    image: product.image_url,
+    healthscore: product.nutriscore_score,
+    healthgrade: product.nutriscore_grade
+}));
+
+
+res.json(products)
 
 
 
@@ -27,7 +47,7 @@ const data = await response.json()
 
 const name = data.product.product_name_en;
 
-const brand = data.product.brands.split(",")[0].trim()
+const brand = data.product.brands?.split(",")[0].trim()
 
 const image = data.product.image_url
 
