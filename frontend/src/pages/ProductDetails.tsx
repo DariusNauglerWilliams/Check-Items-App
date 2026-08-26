@@ -1,52 +1,71 @@
+import { useEffect } from "react"
+import { useState } from "react"
+import { useParams } from "react-router-dom"
 
 function ProductDetails(){
+
+
+  type Product = {
+
+  name: string
+  brand?: string
+  image?: string
+  healthscore?: number
+  healthgrade?: string
+  ingredients?: string
+  calories?: number
+  sugar?: number
+  protein?: number
+  fat?: number
+  salt?: number
+  allergens?: string[]
+  additives?: string[]
+
+  }
+  const { barcode } = useParams()
+
+  const [product, setProduct] = useState<Product | null>(null)
+
+  useEffect(() => {
+
+fetch(`http://localhost:3000/products/${barcode}`)
+.then(res => res.json())
+.then(product => {
+  setProduct(product)
+})
+
+}, [barcode])
+
+if(!product){
+
+
+  return <p>Loading...</p>
+}
+
+
+
 
 return(
 <>
 
-
-
   <section>
-      <div>
-        <h1>Product Name</h1>
-        <p>Brand name</p>
-      </div>
+     <h1>{product.name}</h1>
+     <p>{product.brand}</p>
+     <p>{product.image}</p>
+     <p>{product.healthscore}</p>
+     <p>{product.healthgrade}</p>
+     <p>{product.ingredients}</p>
+     <p>{product.calories}</p>
+     <p>{product.sugar}</p>
+     <p>{product.protein}</p>
+     <p>{product.fat}</p>
+     <p>{product.salt}</p>
+     <p>{product.allergens}</p>
+     <p>{product.additives}</p>
+     
 
-      <div>
-        <img src="" alt="Product image" />
-      </div>
 
-      <div>
-        <h3>Health Score</h3>
-        <p>Score: -- / 100</p>
-      </div>
-
-      <div>
-        <h3>Ingredients</h3>
-        <p>Ingredient list will appear here.</p>
-      </div>
-
-      <div>
-        <h3>Nutrition Facts</h3>
-        <p>Calories: --</p>
-        <p>Sugar: --</p>
-        <p>Protein: --</p>
-        <p>Fat: --</p>
-        <p>Salt: --</p>
-      </div>
-
-      <div>
-        <h3>Warnings</h3>
-        <p>Additives, allergens, and high sugar warnings will appear here.</p>
-      </div>
-
-      <div>
-        <button>Save to History</button>
-        <button>Add to Favorites</button>
-        <button>Compare Product</button>
-      </div>
     </section>
-
 
 </>
 )
