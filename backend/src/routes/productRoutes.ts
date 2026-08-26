@@ -2,6 +2,7 @@ import Express from "express";
 
 
 
+
 const router = Express.Router();
 
 
@@ -31,7 +32,6 @@ const products = data.products.map((product: any) => ({
 res.json(products)
 
 
-
 })
 
 
@@ -43,7 +43,21 @@ const barcode = req.params.barcode;
 
 const response = await fetch(`https://world.openfoodfacts.org/api/v2/product/${barcode}`)
 
+if(!response.ok){
+
+return res.status(response.status).json({error:  "Open food facts barcode is temporarily unavaliable, please try again later. "})
+}
+
+
 const data = await response.json()
+
+
+if(!data.product){
+
+    return res.status(404).json({
+        error: "Product not found."
+    })
+}
 
 const name = data.product.product_name_en;
 
