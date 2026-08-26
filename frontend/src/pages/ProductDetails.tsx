@@ -47,25 +47,31 @@ if(!product){
 
 return(
 <>
+<section>
+  <h4>Nutrition values are per 100 g.</h4>
+</section>
 
   <section>
      <h1>{product.name}</h1>
-     <p>{product.brand}</p>
-     <p>{product.image}</p>
-     <p>{product.healthscore}</p>
-     <p>{product.healthgrade}</p>
-     <p>{product.ingredients}</p>
-     <p>{product.calories}</p>
-     <p>{product.sugar}</p>
-     <p>{product.protein}</p>
-     <p>{product.fat}</p>
-     <p>{product.salt}</p>
-     <p>{product.allergens}</p>
-     <p>{product.additives}</p>
+
+     <img src={product.image} alt={product.name}></img>
+          <p>Brand: {product.brand ?? "N/A"}</p>
+     <p>Overall Score: {product.healthscore ?? "N/A"}</p>
+     <p>Overall Grade: {product.healthgrade?.toUpperCase() ?? "N/A"}</p>
+     <p>Ingredients: {product.ingredients ?? "N/A"}</p>
+     <p>Calories: {product.calories ?? "N/A:"}kcal</p>
+     <p>Sugar: {product.sugar ?? "N/A:"}g</p>
+     <p>Protein: {product.protein ?? "N/A:"}g</p>
+     <p>Fat: {product.fat ?? "N/A:"}g</p>
+     <p>Salt: {product.salt ?? "N/A:"}g</p>
+     <p>Allergens: {product.allergens?.map(item => item.replace("en:", "")).join(", ") || "N/A"} </p>
+     <p>Additives: {product.additives?.map(item => item.replace("en:", "")).join(", ").toUpperCase() || "N/A"}</p>
      
 
 
     </section>
+
+    
 
 </>
 )
