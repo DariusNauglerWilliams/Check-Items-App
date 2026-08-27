@@ -1,7 +1,9 @@
 import { useState } from "react";
 import './Navbar.css'
 import searchIcon from "../assets/search-icon.png"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 
 
@@ -15,6 +17,9 @@ const [loading, setLoading] = useState(false)
 
 const [error, setError] = useState("")
 
+const location = useLocation()
+
+const searchRef = useRef<HTMLInputElement>(null)
 
 type searchResult = {
 
@@ -25,6 +30,23 @@ image?: string
 
 
 }
+
+  useEffect(() => {
+    newResult([])
+  }, [location.pathname])
+
+  
+
+  useEffect(() => {
+  if (location.hash === "#search-bar") {
+    searchRef.current?.focus()
+    searchRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    })
+  }
+}, [location.hash])
+
 
 function handleSearch(){
 if(!query.trim()) return;
@@ -65,12 +87,14 @@ return(
   
 {loading && <p>Loading...</p>}
 {error && <p>{error}</p>}
-<div className="search-bar">
+<div className="search-bar" id="search-bar">
 
 <input 
+ref={searchRef}
 type="text"  
 placeholder="Search products..." 
 className="SearcherBar" 
+
 value={query}
 onChange={e => setQuery(e.target.value)}/>
 

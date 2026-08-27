@@ -10,8 +10,51 @@ import herobottom from "../assets/ChatGPT Image Jul 9, 2026, 03_35_53 PM.png"
 
 import camImg from "../assets/camera.png"
 import searchImg from "../assets/search.png"
+import { useRef } from 'react'
+import { BrowserMultiFormatReader } from '@zxing/browser'
+import { useNavigate } from 'react-router-dom'
+
 
 function Scan() {
+
+  const navigate = useNavigate()
+
+async function getCamera() {
+  if (!videoRef.current) return
+
+  try {
+     const controls = await codeReader.decodeFromConstraints(
+       {
+        video: {
+          facingMode: "environment"
+        }
+      },
+      videoRef.current,
+      (result) => {
+        if (result) {
+          const barcode = result.getText()
+
+          controls.stop()
+
+          navigate(`/products/${barcode}`)
+        }
+      }
+    )
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+
+
+const videoRef = useRef<HTMLVideoElement>(null)
+
+
+
+const codeReader = new BrowserMultiFormatReader()
+
+
+
   return (
     <section className="scan-page">
       <div className="scan-hero">
@@ -28,10 +71,13 @@ function Scan() {
 <div className='wrapper-scan-actions'>
       <div className="scan-actions-1">
             <img src={scanImg} alt="scanImg" className="scan-above" />
-        <button className="scan-button scan-button-primary">
+        <button className="scan-button scan-button-primary" 
+        onClick={getCamera}>
           <img src={camImg} alt="scanImg" className="scan-button-icon" />
           Open Scanner
         </button>
+
+        <video ref={videoRef} autoPlay playsInline/>
       </div>
 
       <div className="scan-or-wrapper">
@@ -39,7 +85,7 @@ function Scan() {
       </div>
 
       <div className="scan-actions-2">
-        <button className="scan-button scan-button-secondary">
+        <button className="scan-button scan-button-secondary" onClick={() => navigate("/#search-bar")}>
           <img src={searchImg} alt="searchimg" className="scan-button-icon" />
           Search Manually
         </button>
