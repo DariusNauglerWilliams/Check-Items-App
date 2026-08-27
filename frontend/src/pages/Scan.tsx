@@ -13,18 +13,20 @@ import searchImg from "../assets/search.png"
 import { useRef } from 'react'
 import { BrowserMultiFormatReader } from '@zxing/browser'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 function Scan() {
 
   const navigate = useNavigate()
+  const controlsRef = useRef<any>(null)
 
 async function getCamera() {
   if (!videoRef.current) return
 
   try {
-     const controls = await codeReader.decodeFromConstraints(
-       {
+    const controls = await codeReader.decodeFromConstraints(
+      {
         video: {
           facingMode: "environment"
         }
@@ -34,17 +36,19 @@ async function getCamera() {
         if (result) {
           const barcode = result.getText()
 
-          controls.stop()
+          controlsRef.current?.stop()
 
           navigate(`/products/${barcode}`)
         }
       }
     )
+
+    controlsRef.current = controls
+
   } catch (err) {
     console.log(err)
   }
 }
-
 
 
 const videoRef = useRef<HTMLVideoElement>(null)
@@ -52,6 +56,12 @@ const videoRef = useRef<HTMLVideoElement>(null)
 
 
 const codeReader = new BrowserMultiFormatReader()
+
+useEffect(() => {
+  return () => {
+    controlsRef.current?.stop()
+  }
+}, [])
 
 
 
