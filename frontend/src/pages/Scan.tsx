@@ -20,6 +20,13 @@ function Scan() {
 
   const navigate = useNavigate()
   const controlsRef = useRef<any>(null)
+  
+const videoRef = useRef<HTMLVideoElement>(null)
+
+
+
+const codeReader = new BrowserMultiFormatReader()
+
 
 async function getCamera() {
   if (!videoRef.current) return
@@ -50,12 +57,6 @@ async function getCamera() {
   }
 }
 
-
-const videoRef = useRef<HTMLVideoElement>(null)
-
-
-
-const codeReader = new BrowserMultiFormatReader()
 
 useEffect(() => {
   return () => {
