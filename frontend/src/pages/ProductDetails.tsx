@@ -2,11 +2,13 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 
+
 function ProductDetails(){
 
 
   type Product = {
 
+  barcode: string
   name: string
   brand?: string
   image?: string
@@ -22,7 +24,8 @@ function ProductDetails(){
   additives?: string[]
 
   }
-  const { barcode } = useParams()
+  
+const { barcode } = useParams()
 
   const [product, setProduct] = useState<Product | null>(null)
 
@@ -31,17 +34,40 @@ function ProductDetails(){
 fetch(`http://localhost:3000/products/${barcode}`)
 .then(res => res.json())
 .then(product => {
-  setProduct(product)
+  setProduct(product) 
+  LocalSaveHistory(product)
 })
 
 }, [barcode])
+
+function LocalSaveHistory (product : Product){
+
+  let savedResult: Product[] = []
+
+ const savedHistory = localStorage.getItem("scanHistory")
+
+ if(savedHistory){
+
+  savedResult = JSON.parse(savedHistory)
+
+ }
+if(barcode){
+ product.barcode = barcode
+}
+if(!savedResult.some(productVal => productVal.barcode === barcode )){
+savedResult.push(product)
+
+ localStorage.setItem("scanHistory", JSON.stringify(savedResult))
+}
+
+}
+
 
 if(!product){
 
 
   return <p>Loading...</p>
 }
-
 
 
 

@@ -7,6 +7,18 @@ import clockImg from "../assets/clock.png"
 import compareImg from "../assets/ab-testing (1).png"
 
 function Main() {
+ 
+ 
+ 
+function goSearch (){
+  
+  document.querySelector<HTMLInputElement>(".SearcherBar")?.focus()
+
+}
+
+
+
+
   const navigate = useNavigate()
   return (
     <>
@@ -19,7 +31,7 @@ function Main() {
        
 
         <div className="hero-search">
-          <input className="hero-input" type="text" placeholder="Search for a product..." /> <button className="hero-button">Search</button>
+          <input className="hero-input" type="text" placeholder="Search for a product..." onClick={goSearch} /> <button className="hero-button" onClick={goSearch} >Search</button>
 
 
      
@@ -30,7 +42,7 @@ function Main() {
 
         <p className="hero-or">or</p>
 
-        <button className="hero-scan-button"><img src={barcodeScan} alt="img" className="img-btn"></img>Scan Barcode</button>
+        <button className="hero-scan-button" onClick={() => navigate("/scan")}><img src={barcodeScan} alt="img" className="img-btn" ></img>Scan Barcode</button>
 
 
 
