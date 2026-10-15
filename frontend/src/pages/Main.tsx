@@ -6,6 +6,7 @@ import scanImg from "../assets/scanner.png"
 import clockImg from "../assets/clock.png"
 import compareImg from "../assets/ab-testing (1).png"
 
+
 function Main() {
  
  
@@ -16,6 +17,34 @@ function goSearch (){
 
 }
 
+
+  type Product = {
+
+  name: string
+  brand?: string
+  image?: string
+  healthscore?: number
+  healthgrade?: string
+  ingredients?: string
+  calories?: number
+  sugar?: number
+  protein?: number
+  fat?: number
+  salt?: number
+  allergens?: string[]
+  additives?: string[]
+
+  }
+
+
+let getDataMain: Product[] = []
+
+let localdatagetter = localStorage.getItem("scanHistory")
+
+if(localdatagetter){
+
+  getDataMain = JSON.parse(localdatagetter)
+}
 
 
 
@@ -80,7 +109,10 @@ function goSearch (){
       <section className="recent-scans">
         <h3 className="section-title">Recent Scans</h3>
 
-        <p className="empty-state">No products scanned yet.</p>
+        <div className="empty-state">
+          <div className="content-empty">{getDataMain.slice(0, 3).map((product, index) => <div key={index}> <p>{product.name}</p> <p>{product.brand}</p> <img src={product.image} alt={product.name}></img></div>)}{getDataMain.length === 0 && "No Products Scanned Yet"}</div>
+        </div>
+        
       </section>
 
       <section className="how-it-works">
