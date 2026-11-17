@@ -110,7 +110,7 @@ if(localdatagetter){
         <h3 className="section-title">Recent Scans</h3>
 
         <div className="empty-state">
-          <div className="content-empty">{getDataMain.slice(0, 3).map((product, index) => <div key={index}> <p>{product.name}</p> <p>{product.brand}</p> <img src={product.image} alt={product.name}></img></div>)}{getDataMain.length === 0 && "No Products Scanned Yet"}</div>
+          <div className="content-empty">{getDataMain.slice(0, 4).map((product, index) => <div key={index}> <p>{product.name}</p> <p>{product.brand}</p> <img src={product.image} alt={product.name}></img></div>)}{getDataMain.length === 0 && "No Products Scanned Yet"}</div>
         </div>
         
       </section>
