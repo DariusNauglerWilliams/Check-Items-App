@@ -4,27 +4,10 @@ import "./history.css"
 import rightArrow from '../assets/right-arrow.png'
 import star from "../assets/star.png"
 import red from "../assets/round.png"
-import "./ProductDetails"
+import type { Product } from "../productType.ts"
 
 
 
-  type Product = {
-
-  name: string
-  brand?: string
-  image?: string
-  healthscore?: number
-  healthgrade?: string
-  ingredients?: string
-  calories?: number
-  sugar?: number
-  protein?: number
-  fat?: number
-  salt?: number
-  allergens?: string[]
-  additives?: string[]
-
-  }
 
 let getData:  Product[] = []
 

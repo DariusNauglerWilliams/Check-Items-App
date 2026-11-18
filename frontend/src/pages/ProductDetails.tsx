@@ -1,30 +1,12 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
-
+import type { Product } from "../productType"
 
 function ProductDetails(){
 
 
-  type Product = {
-
-  barcode: string
-  name: string
-  brand?: string
-  image?: string
-  healthscore?: number
-  healthgrade?: string
-  ingredients?: string
-  calories?: number
-  sugar?: number
-  protein?: number
-  fat?: number
-  salt?: number
-  allergens?: string[]
-  additives?: string[]
-
-  }
-  
+ 
 const { barcode } = useParams()
 
   const [product, setProduct] = useState<Product | null>(null)

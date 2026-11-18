@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 import scanImg from "../assets/scanner.png"
 import clockImg from "../assets/clock.png"
 import compareImg from "../assets/ab-testing (1).png"
-
+import type { Product } from "../productType"
 
 function Main() {
  
@@ -18,24 +18,7 @@ function goSearch (){
 }
 
 
-  type Product = {
-
-  name: string
-  brand?: string
-  image?: string
-  healthscore?: number
-  healthgrade?: string
-  ingredients?: string
-  calories?: number
-  sugar?: number
-  protein?: number
-  fat?: number
-  salt?: number
-  allergens?: string[]
-  additives?: string[]
-
-  }
-
+ 
 
 let getDataMain: Product[] = []
 
